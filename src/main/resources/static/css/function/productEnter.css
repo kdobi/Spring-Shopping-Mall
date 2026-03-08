@@ -1,0 +1,154 @@
+.product-enter-main {
+    width: 100%;
+    min-height: calc(100vh - 84px);
+    background-color: #f5f6f8;
+    padding: 50px 20px 80px;
+}
+
+.product-enter-wrap {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.product-enter-card {
+    width: 100%;
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+    padding: 42px;
+}
+
+.title-box {
+    margin-bottom: 30px;
+}
+
+.title-box h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.title-box p {
+    font-size: 17px;
+    color: #777;
+    line-height: 1.6;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-row label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    border: 1px solid #d9dde3;
+    border-radius: 16px;
+    background: #fff;
+    font-size: 16px;
+    color: #222;
+    padding: 16px 18px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-row input {
+    height: 58px;
+}
+
+.form-row select {
+    height: 58px;
+}
+
+.form-row textarea {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: #2f80ed;
+    box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.12);
+}
+
+.button-box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.submit-btn,
+.cancel-btn {
+    border: none;
+    border-radius: 14px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.submit-btn {
+    background-color: #2f80ed;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #1f6fd8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(47, 128, 237, 0.25);
+}
+
+.cancel-btn {
+    background-color: #eef1f5;
+    color: #444;
+}
+
+.cancel-btn:hover {
+    background-color: #e2e6eb;
+    transform: translateY(-2px);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .product-enter-card {
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
+
+    .title-box h1 {
+        font-size: 32px;
+    }
+
+    .button-box {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+}

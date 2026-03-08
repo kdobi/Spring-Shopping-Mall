@@ -73,7 +73,7 @@ public class MemberController {
             return "login";
         }
 
-        return "home";
+        return "redirect:/home";
     }
 
 }

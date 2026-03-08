@@ -2,45 +2,19 @@
 <br>
 
 ## 진행사항
-AUTH 기능 구현 완료
+메인 홈페이지 및 상품 등록창 프론트엔드 구현완료
 
 ⬇️
 
-메인 홈페이지 구성하기
-
-1. 회원가입
-개선사항
-- 아무것도 안치면 데이터 베이스에 올라가는 버그 있음
-- 이메일 중복체크 구현 ( ✅ 완료 )
-
-2. 로그인 
-- 구현 시작하기 ➡️ ( ✅ 완료 )
-
-<br>
+상품 등록 로직, 데이터 베이스 구성하기
 
 ## 중간점검
 
 <p align="center">
-  <img src="image/start.png" width="30%">
-  <img src="image/join.png" width="30%">
-  <img src="image/login.png" width="30%">
+  <img src="image/home.png" width="45%">
+  <img src="image/productEnter.png" width="45%">
 </p>
 
-### 회원가입 페이지 기능
-
-•	비밀번호 확인 검증 
-
-•	이메일 중복 체크
-
-•	회원 정보 DB 저장
-
-### 로그인 페이지 기능
-
-•	이메일 존재 여부 확인
-
-•	비밀번호 검증
-
-•	로그인 성공 시 메인 페이지 이동
 
 <br>
 
