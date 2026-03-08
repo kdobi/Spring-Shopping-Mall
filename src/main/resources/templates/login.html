@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>로그인</h2>
+
+  <form action="/login" method="post">
+
+    <div class="input-group">
+      <label>이메일</label>
+      <input type="email" name="email" placeholder="이메일 입력">
+    </div>
+
+    <div class="input-group">
+      <label>비밀번호</label>
+      <input type="password" name="password" placeholder="비밀번호 입력">
+    </div>
+
+    <button type="submit">로그인</button>
+
+  </form>
+
+  <p class="link">
+    아직 회원이 아니신가요?
+    <a href="/join">회원가입</a>
+  </p>
+
+</div>
+
+</body>
+</html>
