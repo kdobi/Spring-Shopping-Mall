@@ -27,9 +27,22 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
         return member;
     }
 
-//    @Override
-//    public Optional<Member> findByEmail(String email) {
-//
-//    }
+    @Override
+    public Optional<Member> findByEmail(String email) {
+
+        List<Member> result = jdbcTemplate.query(
+                "select * from member where email = ?",
+                (rs, rowNum) -> {
+                    Member member = new Member();
+                    member.setId(rs.getLong("id"));
+                    member.setName(rs.getString("name"));
+                    member.setEmail(rs.getString("email"));
+                    member.setPassword(rs.getString("password"));
+                    return member;
+                },
+                email
+        );
+        return result.stream().findAny();
+    }
 
 }

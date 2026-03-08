@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Optional;
+
 
 @Controller
 public class MemberController {
@@ -25,6 +27,13 @@ public class MemberController {
     @PostMapping("/join")
     public String join(MemberForm form, Model model) {
 
+        Optional<Member> findMember = memberService.findByEmail(form.getEmail());
+
+        if (findMember.isPresent()) {
+            model.addAttribute("errorMessage", "이미 존재하는 이메일입니다.");
+            return "join";
+        }
+
         if (!form.getPassword().equals(form.getPasswordCheck())) {
             model.addAttribute("errorMessage", "비밀번호가 일치하지 않습니다.");
             return "join";
@@ -42,8 +51,29 @@ public class MemberController {
     }
 
     @GetMapping("/login")
-    public String login(){
+    public String loginPage(){
         return "login";
+    }
+
+
+    @PostMapping("/login")
+    public String login(MemberForm form, Model model) {
+
+        Optional<Member> storeMember = memberService.findByEmail(form.getEmail());
+
+        if (storeMember.isEmpty()) {
+            model.addAttribute("errorMessage", "존재하지 않는 이메일입니다.");
+            return "login";
+        }
+
+        Member member = storeMember.get();
+
+        if (!member.getPassword().equals(form.getPassword())) {
+            model.addAttribute("errorMessage", "비밀번호가 일치하지 않습니다.");
+            return "login";
+        }
+
+        return "home";
     }
 
 }

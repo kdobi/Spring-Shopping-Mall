@@ -34,6 +34,21 @@
   </p>
 
 </div>
+<div id="snackbar" th:if="${errorMessage}" th:text="${errorMessage}"></div>
+
+<script>
+  window.addEventListener("load", function () {
+    const snackbar = document.getElementById("snackbar");
+
+    if (snackbar) {
+      snackbar.classList.add("show");
+
+      setTimeout(function () {
+        snackbar.classList.remove("show");
+      }, 2000);
+    }
+  });
+</script>
 
 </body>
 </html>
