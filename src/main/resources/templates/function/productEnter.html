@@ -18,6 +18,8 @@
                 <p>판매할 상품 정보를 입력해주세요.</p>
             </div>
 
+            <p class="error-message" th:if="${errorMessage}" th:text="${errorMessage}"></p>
+
             <form action="/productEnter" method="post" class="product-form" enctype="multipart/form-data">
                 <div class="form-row">
                     <label for="name">상품명</label>

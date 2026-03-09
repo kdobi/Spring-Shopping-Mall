@@ -27,8 +27,25 @@ public class ProductController {
     }
 
     @PostMapping("/productEnter")
-    public String productEntered(ProductForm form,
+    public String productEntered(ProductForm form, Model model,
                                  @RequestParam("imageFile") MultipartFile imageFile) throws IOException {
+
+        if (form.getName() == null || form.getName().trim().isEmpty()) {
+            model.addAttribute("errorMessage", "에러 : 상품명을 입력하세요.");
+            return "function/productEnter";
+        }
+
+        // 가격 검사
+        if (form.getPrice() == null) {
+            model.addAttribute("errorMessage", "에러 : 가격을 입력하세요.");
+            return "function/productEnter";
+        }
+
+        // 재고 검사
+        if (form.getStockQuantity() == null) {
+            model.addAttribute("errorMessage", "에러 : 재고를 입력하세요.");
+            return "function/productEnter";
+        }
 
         Product product = new Product();
 
