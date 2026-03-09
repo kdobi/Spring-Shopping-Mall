@@ -2,18 +2,9 @@
 <br>
 
 ## 진행사항
-메인 홈페이지 및 상품 등록창 프론트엔드 구현완료
+상품 등록 로직 및 데이터 베이스 구현
 
-⬇️
-
-상품 등록 로직, 데이터 베이스 구성하기
-
-## 중간점검
-
-<p align="center">
-  <img src="image/home.png" width="45%">
-  <img src="image/productEnter.png" width="45%">
-</p>
+- 이름이랑 가격 등록 안됐을때 케이스 수정하기 
 
 
 <br>

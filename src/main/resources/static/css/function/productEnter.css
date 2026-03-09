@@ -132,7 +132,6 @@
     transform: translateY(-2px);
 }
 
-/* 핵심: 기본 file input은 완전히 숨김 */
 .hidden-file-input {
     display: none !important;
 }
@@ -156,7 +155,7 @@
     height: 38px;
     padding: 0 16px;
     background: #e2e6eb;
-    opacity: 85%;
+    opacity: 0.85;
     color: #444;
     border-radius: 10px;
     font-size: 14px;
@@ -166,7 +165,7 @@
 }
 
 .file-upload-btn:hover {
-    background: #e2e6eb;
+    background: #d8dde5;
 }
 
 .file-upload-name {
@@ -177,7 +176,6 @@
     text-overflow: ellipsis;
 }
 
-/* 모바일 대응 */
 @media (max-width: 768px) {
     .product-enter-card {
         padding: 28px 22px;
