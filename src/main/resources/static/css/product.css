@@ -1,0 +1,140 @@
+.product-search-main {
+    width: 100%;
+    min-height: calc(100vh - 84px);
+    background-color: #f5f6f8;
+    padding: 40px 20px 80px;
+}
+
+.product-search-wrap {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.search-top {
+    margin-bottom: 28px;
+}
+
+.search-top h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.search-top p {
+    font-size: 16px;
+    color: #777;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 20px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e9edf2;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-image-box {
+    width: 100%;
+    height: 240px;
+    background: #fff;
+    border-bottom: 1px solid #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+}
+
+.product-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.no-image {
+    width: 100%;
+    height: 100%;
+    background: #f3f5f7;
+    color: #999;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.product-info {
+    padding: 18px 16px 20px;
+}
+
+.product-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.product-price {
+    font-size: 34px;
+    font-weight: 800;
+    color: #d32f2f;
+    margin-bottom: 12px;
+}
+
+.product-stock {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2d7d46;
+    margin-bottom: 12px;
+}
+
+.sold-out {
+    color: #d32f2f;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-top h1 {
+        font-size: 28px;
+    }
+
+    .product-price {
+        font-size: 28px;
+    }
+}

@@ -72,4 +72,10 @@ public class ProductController {
 
         return "redirect:/home";
     }
+
+    @GetMapping("/products")
+    public String product() {
+        return "product";
+    }
+
 }

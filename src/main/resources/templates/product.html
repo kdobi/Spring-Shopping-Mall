@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 조회</title>
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="product-search-main">
+  <div class="product-search-wrap">
+
+    <section class="search-top">
+      <h1>상품 조회</h1>
+      <p>등록된 상품을 확인해보세요.</p>
+    </section>
+
+    <section class="product-grid">
+
+      <article class="product-card" th:each="product : ${products}">
+        <div class="product-image-box">
+          <img th:if="${product.imagePath != null and !#strings.isEmpty(product.imagePath)}"
+               th:src="${product.imagePath}"
+               alt="상품 이미지">
+
+          <div class="no-image"
+               th:if="${product.imagePath == null or #strings.isEmpty(product.imagePath)}">
+            이미지 없음
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h3 class="product-name" th:text="${product.name}">상품명</h3>
+
+          <div class="product-price">
+            <span th:text="${#numbers.formatInteger(product.price, 3, 'COMMA')} + '원'">10,000원</span>
+          </div>
+
+          <div class="product-stock">
+                        <span th:if="${product.stockQuantity > 0}">
+                            재고:
+                            <span th:text="${product.stockQuantity}">10</span>개
+                        </span>
+
+            <span class="sold-out" th:if="${product.stockQuantity == 0}">
+                            품절
+                        </span>
+          </div>
+
+          <p class="product-description"
+             th:text="${product.description != null and !#strings.isEmpty(product.description) ? product.description : '상품 설명이 없습니다.'}">
+            상품 설명
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </div>
+</main>
+
+</body>
+</html>
