@@ -7,12 +7,15 @@ import jakarta.persistence.*;
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
     private Long id;
 
     private String name;
     private int price;
+    @Column(name = "stock_quantity")
     private int stockQuantity;
+    @Column(name = "image_path")
     private String imagePath;
     private String description;
 
