@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>상품 검색</title>
+
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/function/productSearch.css">
+
 </head>
+
 <body>
+
+<!-- header -->
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main>
+
+    <div class="search-container">
+
+        <form action="/products/search" method="get" class="search-box">
+
+            <svg class="search-icon" viewBox="0 0 24 24">
+                <path d="M21 21l-4.35-4.35m1.85-5.65a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"/>
+            </svg>
+
+            <input
+                    type="text"
+                    name="name"
+                    placeholder="상품 검색"
+                    class="search-input">
+
+        </form>
+
+    </div>
+
+</main>
 
 </body>
 </html>
-
-
-<div th:replace="~{fragments/header :: header}"></div>

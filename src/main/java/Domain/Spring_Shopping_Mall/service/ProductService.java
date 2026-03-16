@@ -26,6 +26,9 @@ public class ProductService {
     public Product findById(Long id) {
             return productRepository.findById(id)
                     .orElseThrow(() -> new IllegalArgumentException("상품이 없습니다."));
+    }
 
+    public List<Product> searchProducts(String name){
+        return productRepository.findByNameContaining(name);
     }
 }

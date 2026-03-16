@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 public class ProductController {
@@ -91,6 +92,22 @@ public class ProductController {
         model.addAttribute("product", product);
 
         return "product-detail";
+    }
+
+    @GetMapping("/productSearch")
+    public String productSearchPage(){
+
+        return "function/productSearch";
+    }
+
+    @GetMapping("/products/search")
+    public String searchProducts(@RequestParam String name, Model model){
+
+        List<Product> products = productService.searchProducts(name);
+
+        model.addAttribute("products", products);
+
+        return "products";
     }
 
 }

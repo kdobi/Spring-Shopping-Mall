@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
     Product save(Product product); // 내 상품 등록
-//    Optional<List<Product>> findAll();  // 상품 조회
+    List<Product> findByNameContaining(String name);
 
 
 

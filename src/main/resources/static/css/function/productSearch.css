@@ -1,0 +1,51 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* 검색 영역 */
+
+.search-container{
+    display:flex;
+    justify-content:center;
+    margin-top:120px;
+}
+
+/* 검색 박스 */
+
+.search-box{
+    margin-top: 60px;
+    width:700px;
+    height:65px;
+    display:flex;
+    align-items:center;
+    padding:0 15px;
+    border-radius:24px;
+    border:1px solid #ddd;
+    background:white;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* 돋보기 아이콘 */
+
+.search-icon{
+    width:20px;
+    height:20px;
+    color:#888;
+    margin-right:10px;
+}
+
+/* 입력창 */
+
+.search-input{
+    border:none;
+    outline:none;
+    font-size:18px;
+    width:100%;
+}
+
+/* hover 효과 */
+
+.search-box:hover{
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
