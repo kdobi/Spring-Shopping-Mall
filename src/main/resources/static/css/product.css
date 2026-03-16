@@ -138,3 +138,9 @@
         font-size: 28px;
     }
 }
+
+.product-link{
+    text-decoration: none;
+    color: inherit;
+    display:block;
+}
