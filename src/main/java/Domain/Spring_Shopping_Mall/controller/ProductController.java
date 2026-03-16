@@ -74,8 +74,12 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public String product() {
-        return "product";
+    public String productList(Model model) {
+
+        model.addAttribute("products",
+                productService.findAllProducts());
+
+        return "products";
     }
 
 }

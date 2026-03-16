@@ -1,8 +1,15 @@
 package Domain.Spring_Shopping_Mall.domain;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "products")
 public class Product {
 
+    @Id
+    @Column(name = "product_id")
     private Long id;
+
     private String name;
     private int price;
     private int stockQuantity;
