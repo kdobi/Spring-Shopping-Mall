@@ -1,7 +1,16 @@
 # 🛒 Spring Shopping Mall
 <br>
 
+member table에 컬럼 이름 변경
+id -> member_id
+
+
 장바구니 기능 만들기
+
+장바구니 버튼 클릭 
+-> 내 /cart에 PK 넘겨주기
+-> 화면 /products로 이동
+-> 
 
 <br>
 

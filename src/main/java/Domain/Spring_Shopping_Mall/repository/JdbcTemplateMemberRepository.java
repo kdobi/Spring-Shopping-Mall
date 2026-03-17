@@ -34,7 +34,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
                 "select * from member where email = ?",
                 (rs, rowNum) -> {
                     Member member = new Member();
-                    member.setId(rs.getLong("id"));
+                    member.setId(rs.getLong("member_id"));
                     member.setName(rs.getString("name"));
                     member.setEmail(rs.getString("email"));
                     member.setPassword(rs.getString("password"));

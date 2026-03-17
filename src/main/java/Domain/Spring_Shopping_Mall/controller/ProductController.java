@@ -75,6 +75,7 @@ public class ProductController {
         return "redirect:/home";
     }
 
+    // 상품창에 데이터베이스에 있는 모든 상품 표시
     @GetMapping("/products")
     public String productList(Model model) {
 
@@ -84,6 +85,7 @@ public class ProductController {
         return "products";
     }
 
+    // 상품 개인 화면 표시
     @GetMapping("/products/{id}")
     public String productDetail(@PathVariable Long id, Model model) {
 
@@ -94,12 +96,14 @@ public class ProductController {
         return "product-detail";
     }
 
+    // 상품 검색 페이지
     @GetMapping("/productSearch")
     public String productSearchPage(){
 
         return "function/productSearch";
     }
 
+    // 검색된 상품만 리스트로 표시되는 페이지
     @GetMapping("/products/search")
     public String searchProducts(@RequestParam String name, Model model){
 
@@ -109,5 +113,11 @@ public class ProductController {
 
         return "products";
     }
+
+    @GetMapping("/cart")
+    public String cart(){
+        return "function/cart";
+    }
+
 
 }
